@@ -1,0 +1,297 @@
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: radial-gradient(ellipse at bottom, #0d0d2b 0%, #000000 100%);
+  overflow-x: hidden;
+  position: relative;
+}
+
+#bgVideo {
+  position: fixed;
+  top: 10;
+  left: 10;
+  min-width: 100vw;
+  min-height: 100vh;
+  object-fit: cover;
+  z-index: -1; /* Behind content */
+}
+
+
+@keyframes moveStars {
+  from { transform: translate(0, 0); }
+  to { transform: translate(-100px, -100px); }
+}
+body, html {
+  font-family: 'Segoe UI', sans-serif;
+  height: 100%;
+}
+
+.hero {
+  background-color: transparent;
+  height: 100vh;
+  color: white;
+  position: relative;
+  z-index: 1;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 50px;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+nav h1 {
+  font-size: 28px;
+  color: #FFD700;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.content h2 {
+  font-size: 48px;
+  text-shadow: 2px 2px 8px #000;
+}
+
+.content p {
+  font-size: 18px;
+  margin: 20px 0;
+  color: goldenrod;
+}
+
+.btn {
+  padding: 12px 24px;
+  background: #FFD700;
+  color: black;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 0 10px #FFD700;
+}
+.section {
+  padding: 60px 20px;
+  background-color: rgba(0, 0, 0, 0.85);
+  color: white;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 32px;
+  color: #FFD700;
+  margin-bottom: 20px;
+}
+
+.section p {
+  max-width: 800px;
+  margin: auto;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 10px;
+  width: 250px;
+  box-shadow: 0 0 10px #FFD70033;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #FFD70088;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  max-width: 500px;
+  margin: auto;
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  background: #1e1e1e;
+  color: white;
+  font-size: 16px;
+}
+
+form textarea {
+  height: 100px;
+  resize: none;
+}
+
+form button {
+  padding: 12px 30px;
+  background: #FFD700;
+  color: black;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0 10px #FFD700;
+}
+
+form button:hover {
+  background: #ffc107;
+}
+.topmargine{
+    margin: 30px;
+}
+.opacity{
+ background: rgba(0, 0, 0, 0.5);   
+}
+.des{
+    height:2.5%;
+    width: 2.5%;
+    margin-right: 1%;
+}
+#bras{background-color: rgba(0, 0, 0, 0.85);}
+.testimonial-container {
+  max-width: 600px;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+  height: 200px;
+}
+
+.testimonial-slide {
+  display: none;
+  text-align: center;
+  font-size: 18px;
+  color: #ccc;
+  padding: 20px;
+  animation: fade 1s ease-in-out;
+}
+
+.testimonial-slide h4 {
+  color: #FFD700;
+  margin-top: 10px;
+}
+
+.testimonial-slide.active {
+  display: block;
+}
+
+@keyframes fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul {
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .content h2 {
+    font-size: 32px;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  form {
+    width: 90%;
+  }
+
+  .testimonial-container {
+    width: 90%;
+  }
+}
+.footer {
+  background: rgba(0, 0, 0, 0.9);
+  color: #fff;
+  padding: 40px 20px 20px;
+  text-align: center;
+  margin-top: 40px;
+  border-top: 1px solid #FFD70033;
+}
+
+.footer h3 {
+  color: #FFD700;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.footer p {
+  color: #ccc;
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.contact-info p {
+  margin: 4px 0;
+  font-size: 14px;
+}
+
+.social-links {
+  margin-top: 15px;
+}
+
+.social-links a {
+  margin: 0 10px;
+  color: #FFD700;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: #ffffff;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #888;
+}
